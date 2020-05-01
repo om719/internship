@@ -10,8 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.internship.MainActivity;
-import com.example.internship.PdfView;
+import com.example.internship.pdfView;
 import com.example.internship.R;
 
 import java.util.List;
@@ -65,7 +64,7 @@ public class MyAdapter  extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         public void onClick(View v) {
             int position=getAdapterPosition();
             final ListItem item=listItems.get(position);
-            Intent pdfintent=new Intent(context, PdfView.class);
+            Intent pdfintent=new Intent(context, pdfView.class);
             pdfintent.putExtra("name",item.getName());
             context.startActivity(pdfintent);
 

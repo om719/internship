@@ -18,7 +18,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class PdfView extends AppCompatActivity {
+public class pdfView extends AppCompatActivity {
 
     private Bundle extras;
     PDFView pdfView;

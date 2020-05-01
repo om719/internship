@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.DownloadManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -31,9 +30,7 @@ import java.util.regex.Pattern;
 import Adapter.MyAdapter;
 import Model.ListItem;
 
-import static com.android.volley.Request.*;
-
-public class MainActivity extends AppCompatActivity {
+public class pdfList extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
@@ -47,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_pdf_list);
 
         search=(Button)findViewById(R.id.searchid);
         query=(EditText) findViewById(R.id.queryid);
@@ -77,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 //Adding the entire list to the adapter,check Adapter package
-                adapter=new MyAdapter(MainActivity.this,listItems);
+                adapter=new MyAdapter(pdfList.this,listItems);
                 recyclerView.setAdapter(adapter);
             }
         }, new Response.ErrorListener() {
@@ -105,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
                         listItems.add(item);
                     }
                 }
-                adapter=new MyAdapter(MainActivity.this,listItems);
+                adapter=new MyAdapter(pdfList.this,listItems);
                 recyclerView.setAdapter(adapter);
             }
         });
