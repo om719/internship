@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEDFDE"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="@string/Page_Name"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/searchid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/textView"
+        android:layout_marginLeft="228dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/btn_round"
+        android:text="@string/Search_name" />
+
+
+    <EditText
+        android:id="@+id/queryid"
+        android:layout_width="185dp"
+        android:layout_height="52dp"
+        android:layout_below="@+id/textView"
+        android:layout_marginLeft="37dp"
+
+
+        android:layout_marginTop="35dp"
+        android:background="@drawable/edit_round"
+        android:ems="10"
+        android:hint="Enter search query"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="#222"
+        android:textStyle="bold" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reciclerviewid"
+        android:layout_width="291dp"
+        android:layout_height="443dp"
+        android:layout_below="@+id/queryid"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+
+        android:background="#EEDFDE" />
+
+
+</RelativeLayout>
